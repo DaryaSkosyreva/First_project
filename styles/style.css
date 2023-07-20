@@ -1,15 +1,11 @@
-body {
+.page {
     margin: 0;
     padding: 0;
-}
-.page {
     max-width: 1440px;
-    margin: 0 auto;
 }
 
 .header {
     display: grid;
-    height: 109px;
     grid-template-columns: 1fr min-content 1fr;
     margin: 92px 49px 92px 51px;
     align-items: center;
@@ -23,9 +19,9 @@ body {
 .header__links-list {
     display: flex;
     flex-direction: row;
-    height: 23px;
     list-style: circle;
     gap: 34px;
+    font-size: 18px;
 }
 
 .header__link_active {
@@ -42,12 +38,6 @@ body {
     width: 100%;
 }
 
-.header__link {
-    font-size: 18px;
-    font-style: normal;
-    line-height: normal;
-}
-
 .header__link .header__link_active {
     text-decoration: none;
 }
@@ -59,10 +49,8 @@ body {
 .address {
     display:flex;
     flex-direction: column;
-    height: 97px;
     font-size: 18px;
     font-style: normal;
-    line-height: 135%;
     justify-content: center;
     align-items: start;
 }
@@ -73,8 +61,8 @@ body {
 }
 
 .cover {
-    margin: auto auto;
-    min-height: 740px;
+    margin: auto;
+    min-height: 753px;
     background-image: url(/images/cover.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -94,29 +82,33 @@ body {
 .cover__title {
     display: flex;
     flex-direction: column;
+    padding: 100px 50px;
     font-size: 100px;
-    font-style: normal;
-    line-height: 115%;
     text-transform: uppercase;
     gap: 20px;
     color: #FFF;
-    padding: 165px 50px 237px;
+    margin: 0 auto;
     letter-spacing: 30px;
+    justify-content: end;
 }
 
 .cover__text {
     z-index: 2;
+    margin-top: 60px;
 }
 
 .cover__text_align_center {
     text-align: center;
     z-index: 2;
-    padding: 20px 50px 110px;
+    margin: 0;
+    margin-right: 40px;
   }
   
   .cover__text_align_right {
     text-align: right;
     z-index: 2;
+    margin: 0;
+    padding: 0;
   }
 
   .cover__text-letter-space {
@@ -132,45 +124,41 @@ body {
     color:#FFF;
     justify-content: center;
     z-index: 2;
-    padding-bottom: 62px;
-
+    padding-top: 20px;
+    padding-left: 35px;
 }
+
 .cover__description-text {
-    height: 28px;
-    width: 633px;
     font-weight: lighter;
     font-size: 22px;
     text-transform: uppercase;
-    word-spacing: 9px;
     text-align: center;
     z-index: 2;
-    word-spacing: 17px;
+    word-spacing: 16px;
 }
 
 .bet-button {
-    width: 257px;
-    height: 52px;
     position: absolute;
-    bottom: 50px;
+    bottom: 45px;
     right: 50px;
     color:#FFF;
-    padding: 12px 32px;
+    padding: 12px 36px;
     background-color: transparent;
     text-align: center;
-    font-style: normal;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: lighter;
     border: 1px solid #FFF;
     z-index: 2;
+    word-spacing: 12px;
 }
 
 .lots__heading {
     color: black;
     font-size: 40px;
-    font-style: normal;
     text-transform: uppercase;
-    margin: 180px 90px 27px;
+    padding: 190px 90px 25px;
+
 }
 
 .lots__card-list {
@@ -211,9 +199,7 @@ body {
 
 .card__title {
     font-size: 22px;
-    font-style: normal;
     z-index: 1;
-    line-height: 120%;
     text-decoration-line: underline;
     text-transform: uppercase;
     margin: 50px 40px auto;
@@ -223,11 +209,9 @@ body {
 
 .card__text {
     font-size: 20px;
-    font-style: normal;
-    line-height: 120%;
     z-index: 1;
     text-align: start;
-    margin: 50px 40px;
+    padding: 50px 40px;
 }
 
 .card_type_book {
@@ -247,21 +231,22 @@ body {
     display: block;
     color: #000;
     font-size: 20px;
-    font-style: normal;
-    padding: 30px 90px 2px;
+    padding: 20px 90px 2px;
 }
 
 .about {
     display: grid;
-    margin: 181px 50px;
+    margin: 173px 46px 180px;
     grid-template-columns: 1fr 2fr;
     align-items: center;
-    padding: 20px;
+    column-gap: 20px;
 }
+
 .about__column {
     display: flex;
     justify-content: center;
 }
+
 .about__logo {
     display: flex;
     background-color: black;
@@ -282,12 +267,10 @@ body {
 }
 
 .about__title {
-    color: #000;
     font-size: 40px;
-    font-style: normal;
     text-transform: uppercase;
     grid-column: 2/3;
-    bottom: 75px;
+    padding-top: 15px;
 }
 
 .about__text {
@@ -299,12 +282,12 @@ body {
     align-items: start;
     gap: 25px;
     font-size: 20px;
+    padding-top: 13px;
 }
 
 .footer {
     display: flex;
-    height: 97px;
-    margin: 90px 50px;
+    margin: 0 50px 90px;
     border: 1px white solid;
     justify-content: space-between;
 }
@@ -317,9 +300,7 @@ body {
 .footer__menu-list {
     list-style: none;
     text-align: center;
-    font-family: Raleway;
     font-size: 18px;
-    font-style: normal;
 }
 
 .footer__menu-link_active {
@@ -330,9 +311,8 @@ body {
     display: flex;
     list-style: none;
     justify-content: space-between;
-    align-content: center;
+    align-self: center;
     gap: 45px;
-    flex-wrap: wrap;
 }
 
 .footer__social-icon {
