@@ -1,7 +1,6 @@
-body {
-    margin: 0;
-    padding: 0;
-}    
+.page {
+    max-width: 1440px;
+}
 
 .header {
     display: grid;
@@ -42,18 +41,14 @@ body {
     text-decoration: none;
 }
 
-.header__links-list-item_no-bullit {
-    list-style: none;
-}
-
 .address {
-    display:flex;
+    display: flex;
     flex-direction: column;
+    max-width: 240px;
     font-size: 18px;
     font-style: normal;
     justify-content: center;
     align-items: start;
-    padding-top: 5px;
     gap: 2px;
 }
 
@@ -69,16 +64,18 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 
 .overlay {
     position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
     background-color: rgb(0 0 0 / 0.6);
-    background-position: cover;
+    background-size: cover;
 }
 
 .cover__title {
@@ -93,45 +90,44 @@ body {
     letter-spacing: 30px;
 }
 
-.cover__text_start {
+.cover__title_align_start {
     z-index: 2;
     margin-top: 70px;
     margin-left: 3px;
 }
 
-.cover__text_align_center {
+.cover__title_align_center {
     text-align: center;
     letter-spacing: 30px;
     z-index: 2;
     margin: 0 36px 0 0;
-  }
-  
-  .cover__text_align_right {
+}
+
+.cover__title_align_right {
     text-align: end;
     padding: 0 0 10px 0;
     letter-spacing: 60px;
     z-index: 2;
-  }
+}
 
-.cover__text_space-right {
+.cover__title_space-right {
     letter-spacing: 30px;
 }
 
-  .cover__text-letter-space {
+.cover__title-letter-space {
     letter-spacing: 60px;
-  }
+}
 
-  .cover_text_no-letter-space {
+.cover__title_no-letter-space {
     letter-spacing: 0;
-  }
+}
 
 .cover__description {
     display: flex;
-    color:#FFF;
-    justify-content: center;
+    color: #FFF;
+    justify-content: end;
     z-index: 2;
-    padding-top: 25px;
-    padding-left: 35px;
+    padding-top: 13px;
 }
 
 .cover__description-text {
@@ -140,23 +136,23 @@ body {
     text-transform: uppercase;
     text-align: center;
     z-index: 2;
-    word-spacing: 16px;
+    word-spacing: 18px;
+    padding-top: 12px;
+    margin-right: 78px;
 }
 
 .bet-button {
-    position: absolute;
-    bottom: 45px;
-    right: 50px;
-    color:#FFF;
-    padding: 12px 36px;
+    color: #FFF;
+    padding: 12px 32px;
     background-color: transparent;
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     text-transform: uppercase;
     font-weight: lighter;
     border: 1px solid #FFF;
     z-index: 2;
-    word-spacing: 12px;
+    cursor: pointer;
+    margin-right: 50px;
 }
 
 .lots__heading {
@@ -175,9 +171,13 @@ body {
     gap: 25px;
 }
 
+.lots__film {
+    display: flex;
+    min-height: 450px;
+}
+
 .lots__card-list-item {
     width: 430px;
-    height: 450px;
     flex-grow: 1;
 }
 
@@ -186,36 +186,38 @@ body {
     text-decoration: none;
     height: 100%;
     position: relative;
+    z-index: 2;
 }
 
 .card {
     display: flex;
-    height: 100%;
+    min-height: 450px;
     color: #FFF;
     flex-direction: column;
     justify-content: space-around;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -2;
 }
 
 .card__title {
+    position: relative;
     font-size: 22px;
-    z-index: 1;
     text-decoration-line: underline;
     text-transform: uppercase;
     margin: 50px 40px auto;
     text-align: start;
     justify-self: center;
+    z-index: 2;
 }
 
 .card__text {
+    position: relative;
     font-size: 20px;
-    z-index: 1;
+    z-index: 2;
     text-align: start;
     padding: 50px 40px;
 }
@@ -226,17 +228,12 @@ body {
 
 .card_type_book {
     background-image: url(../images/card-lot-02.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -2;
 }
 
 .card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -2;
 }
+
 .lots__look-more-link {
     display: block;
     color: #000;
@@ -297,13 +294,12 @@ body {
 .footer {
     display: flex;
     margin: 0 50px 90px;
-    border: 1px white solid;
     justify-content: space-between;
+    padding-top: 5px;
 }
 
 .footer__menu {
     align-self: center;
-    border: 1px white solid;
     padding-bottom: 25px;
 }
 
