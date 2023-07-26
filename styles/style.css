@@ -27,6 +27,11 @@
     text-decoration: none;
 }
 
+.header__links-list-item_no-bullit { 
+
+    list-style: none; 
+} 
+
 .header__logo {
     display: block;
     width: 148px;
@@ -35,10 +40,6 @@
 
 .header__logo-image {
     width: 100%;
-}
-
-.header__link .header__link_active {
-    text-decoration: none;
 }
 
 .address {
@@ -131,7 +132,6 @@
 }
 
 .cover__description-text {
-    font-weight: lighter;
     font-size: 22px;
     text-transform: uppercase;
     text-align: center;
